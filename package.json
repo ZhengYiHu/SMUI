@@ -10,6 +10,6 @@
     "url": "https://zymakes.games/"
   },
   "dependencies": {
-    "com.dbrizov.naughtyattributes": "^2.1.0"
+    "com.dbrizov.naughtyattributes": "2.1.0"
   }
 }
