@@ -17,7 +17,7 @@
 
 ### Download Unity Package File
 
-You can also download the package file directly from the [Releases folder](https://github.com/ZhengYiHu/SMUI/tree/main/Releases).
+You can also download the package file directly from the [Releases folder](https://github.com/ZhengYiHu/SMUI/releases).
 
 ---
 
