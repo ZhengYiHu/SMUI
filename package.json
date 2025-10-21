@@ -7,10 +7,5 @@
   "author": {
     "name": "Zy",
     "url": "https://zymakes.games/"
-  },
-    "files": [
-    "Runtime",
-    "Editor",
-    "README.md"
-  ]
+  }
 }
