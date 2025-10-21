@@ -27,13 +27,13 @@ You can also download the package file directly from the [Releases folder](https
 - Create an Animator Controller to use as your state machine.  
 - Configure the states corresponding to the different UI (or game) element configurations.  
 
-![Demo](Medias/Demo.gif)
+![Demo](Medias~/Demo.gif)
 
 2. **Attach `SMUIController`**  
 - Add the `SMUIController.cs` script to a GameObject.  
 - Assign the Animator and define which elements should be visible in each state.  
 
-![Inspector](Medias/Inspector.png)
+![Inspector](Medias~/Inspector.png)
 
 3. **Prepare controllable elements**  
 - Each GameObject you want to control should have a child with an `SMUIElement` attached.  
