@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using NaughtyAttributes;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -7,14 +6,14 @@ namespace SMUI
 {
     public class SMUIController : MonoBehaviour
     {
-        [SerializeField, Required] public Animator animator;
-        [SerializeField,Dropdown("GetLayerNames")] public int layerIndex = 0;
-        [SerializeField, OnValueChanged("OnValidate")] private List<SMUIState> states = new();
+        [SerializeField] public Animator animator;
+        [SerializeField] public int layerIndex = 0;
+        [SerializeField] public List<SMUIState> states = new();
         private HashSet<SMUIElement> allElements = new();
         private SMUIState currentState;
 
         public AnimatorController AnimationController => animator?.runtimeAnimatorController as AnimatorController;
-        public bool hasAnimator => animator != null;
+        public bool HasAnimator => animator != null;
 
         private void Awake()
         {
@@ -28,7 +27,7 @@ namespace SMUI
             UpdateSMUIElements();
         }
         
-        private void OnValidate()
+        public void OnValidate()
         {
             // ensure every state knows its parent
             foreach (var s in states)
@@ -36,21 +35,6 @@ namespace SMUI
                 s.parentController = this;
                 s.UpdateHash();
             }
-        }
-
-        private DropdownList<int> GetLayerNames()
-        {
-            DropdownList<int> list = new DropdownList<int>();
-            if (!hasAnimator)
-            {
-                list.Add("(No Animator Controller)", -1);
-                return list;
-            }
-            for (int i = 0; i < AnimationController.layers.Length; i++)
-            {
-                list.Add(AnimationController.layers[i].name, i);
-            }
-            return list;
         }
 
         /// <summary>

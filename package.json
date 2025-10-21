@@ -7,8 +7,5 @@
   "author": {
     "name": "Zy",
     "url": "https://zymakes.games/"
-  },
-  "dependencies": {
-    "com.dbrizov.naughtyattributes": "2.1.4"
   }
 }

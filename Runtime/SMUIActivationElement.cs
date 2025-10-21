@@ -6,7 +6,6 @@ namespace SMUI
     {
         public override void SetActiveState(bool active)
         {
-            Debug.Log("Setting " + gameObject.name + " to " + active);
             gameObject.SetActive(active);
         }
 

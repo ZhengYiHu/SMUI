@@ -7,7 +7,7 @@ namespace SMUI
     /// <summary>
     /// Class "borrowed" from Cinemachine's State Driven camera to extract states information from animator
     /// </summary>
-    class StateCollector
+    public class StateCollector
     {
         public List<int> States;
         public List<string> StateNames;
